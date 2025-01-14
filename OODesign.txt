@@ -1,0 +1,6 @@
+Inheritance = Turunan 
+Implementation = Ini digunakan ketika sebuah kelas mengimplementasikan fungsi dari kelas cetak biru, dan implementasi dapat berbeda tergantung pada setiap kelas yang
+Dependency =  Jika definisi kelas 2 berubah, maka akan memengaruhi kelas 1, tetapi tidak sebaliknya (tergantung pada).
+Association = Kelas-kelas tersebut saling menyadari (atau tidak menyadari) satu sama lain.
+Aggregation = Jenis khusus asosiasi yang menunjukkan bahwa kelas 2 adalah bagian dari kelas 1.
+Composition = Jenis khusus agregasi yang menunjukkan bahwa kelas 2 tidak dapat ada tanpa kelas 1.
