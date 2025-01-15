@@ -45,4 +45,4 @@ Classes must implement all methods defined in the interface
 Shows how different classes can provide different implementations of the same contract
 
 
-![example image]([https://github.com/beruangtidurr/pbo/blob/Diagram/Example.png])
+![example image](https://github.com/beruangtidurr/pbo/blob/Diagram/Example.png?raw=true)
