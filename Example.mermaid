@@ -1,0 +1,105 @@
+classDiagram
+    %% Association Example
+    Student "1" -- "1..*" Course: takes
+    
+    %% Dependency Example
+    Order ..> PaymentProcessor: uses
+    
+    %% Aggregation Example
+    University o-- Department: contains
+    
+    %% Composition Example
+    Car *-- Engine: has
+    Car *-- Wheel: has
+    
+    %% Inheritance Example
+    Vehicle <|-- Car
+    Vehicle <|-- Motorcycle
+    
+    %% Implementation Example
+    Payment <|.. CreditCardPayment
+    Payment <|.. CashPayment
+    
+    %% Class definitions
+    class Student {
+        -studentId: String
+        -name: String
+        +enroll(Course)
+        +dropCourse(Course)
+    }
+    
+    class Course {
+        -courseId: String
+        -title: String
+        +addStudent(Student)
+        +removeStudent(Student)
+    }
+    
+    class Order {
+        -orderId: String
+        -amount: Double
+        +processPayment()
+    }
+    
+    class PaymentProcessor {
+        +process(amount: Double)
+    }
+    
+    class University {
+        -name: String
+        +addDepartment(Department)
+    }
+    
+    class Department {
+        -name: String
+        -headOfDepartment: String
+    }
+    
+    class Car {
+        -model: String
+        -year: Integer
+        +start()
+        +stop()
+    }
+    
+    class Engine {
+        -type: String
+        -horsepower: Integer
+        +start()
+    }
+    
+    class Wheel {
+        -size: Integer
+        -type: String
+    }
+    
+    class Vehicle {
+        <<abstract>>
+        #brand: String
+        +start()* 
+        +stop()*
+    }
+    
+    class Motorcycle {
+        -engineCC: Integer
+        +start()
+        +stop()
+    }
+    
+    class Payment {
+        <<interface>>
+        +process()*
+        +refund()*
+    }
+    
+    class CreditCardPayment {
+        -cardNumber: String
+        +process()
+        +refund()
+    }
+    
+    class CashPayment {
+        -amount: Double
+        +process()
+        +refund()
+    }
